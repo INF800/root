@@ -137,9 +137,10 @@ function init(){
 	point.velocity.y = 90;
 	point.thickness = 3;
 
-	addCircle(25,CENTER_X,CENTER_Y);
+	addCircle(25,CENTER_X+100,CENTER_Y);
 	addCircle(25,CENTER_X,CENTER_Y+100);
-	addCircle(25,CENTER_X,CENTER_Y-100);
+	addCircle(25,CENTER_X-100,CENTER_Y-100);
+	addCircle(25,CENTER_X-100,CENTER_Y+100);
 
 
 	world.add(paddle1);
@@ -194,10 +195,10 @@ function update(){
     pad1.position.set((paddle1.x-5)-CENTER_X, 0, (paddle1.y+30)-CENTER_Y);
     pad2.position.set((paddle2.x+5)-CENTER_X, 0, (paddle2.y+30)-CENTER_Y);
 
-    /*var i = cir.length;
-    while(i--){
-    	cyl[i].position.set(cir[i].x-CENTER_X, 0, cir[i].y-CENTER_Y)
-    }*/
+    // var i = cir.length;
+    // while(i--){
+    // 	cyl[i].position.set(cir[i].x-CENTER_X, 0, cir[i].y-CENTER_Y)
+    // }
 
     animate();
 }
